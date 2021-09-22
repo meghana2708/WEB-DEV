@@ -5,30 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal CSS and id selectors</title>
+    <title>Class selectors</title>
     <style>
-        h1 {
-            color: cyan;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+        .one {
+            color: indigo;
+            background-color: indianred;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         
-        p {
-            color: darkgray;
-            font-family: sans-serif;
-        }
-        
-        #orange {
-            color: greenyellow;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: medium;
+        .two {
+            color: khaki;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
     </style>
     <!--priority list: inline CSS>id selector>element selecetor-->
 </head>
 
 <body>
-    <h1 id="orange">Heading</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur magnam officia culpa, totam laboriosam, qui eum atque commodi nihil maiores, error dolorem?gid add Deleniti aut, laboriosam est reprehenderit totam nemo labore!</p>
+    <h1 class="one">Heading</h1>
+    <p class="two">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur magnam officia culpa, totam laboriosam, qui eum atque commodi nihil maiores, error dolorem?gid add Deleniti aut, laboriosam est reprehenderit totam nemo labore!</p>
 </body>
 
 </html>
