@@ -17,6 +17,8 @@
             background-color: black;
             min-height: 500px;
             position: relative;
+            display: flex;
+            flex-direction: column;
         }
         
         .child {
@@ -24,7 +26,6 @@
             width: 100px;
             height: 150px;
             background-color: orange;
-            display: inline-block;
         }
     </style>
 </head>
@@ -33,14 +34,8 @@
 
     <div class="parent">
         <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
-        <div class="child"></div>
+        <div style="background-color:red;" class="child"></div>
+        <div style="background-color:blue;" class="child"></div>
     </div>
 
 </body>
