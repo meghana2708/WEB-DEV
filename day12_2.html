@@ -15,15 +15,16 @@
         
         .parent {
             background-color: black;
-            height: 500px;
+            min-height: 500px;
+            position: relative;
         }
         
         .child {
-            position: absolute;
-            bottom: 0;
+            margin: 10px;
             width: 100px;
-            height: 100px;
+            height: 150px;
             background-color: orange;
+            display: inline-block;
         }
     </style>
 </head>
@@ -31,6 +32,14 @@
 <body>
 
     <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
         <div class="child"></div>
     </div>
 
