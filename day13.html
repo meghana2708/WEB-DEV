@@ -9,38 +9,24 @@
     <style>
         * {
             padding: 0;
-            margin: 0;
+            margin: 20px;
             box-sizing: border-box;
         }
         
-        .background {
-            color: azure;
-        }
-        
-        h1.background {
-            background-color: darkgoldenrod;
-        }
-        
-        h2.background {
-            background-color: darkgreen;
-        }
-        
-        h3.background {
-            background-color: darkmagenta;
-        }
-        
-        span.background {
-            background-color: darkslateblue;
+        div.parent div:nth-child(2) {
+            background-color: tan;
         }
     </style>
 </head>
 
 <body>
-
-    <h1 class="background">heading one</h1>
-    <h2 class="background">Heading Two</h2>
-    <h3 class="background">Heading Three</h3>
-    <span class="background">span</span>
+    <div class="parent">
+        <div>i am a div</div>
+        <div>i am second</div>
+        <div>i am third</div>
+        <div></div>
+</body>
+</div>
 </body>
 
 </html>
