@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 40px;
+        }
+        
+        h2 {
+            padding: 5px;
+            color: teal;
+            background-color: thistle;
+        }
+        
+        h2:hover {
+            background-color: wheat;
+            cursor: zoom-in;
+        }
+        
+        div::selection {
+            background-color: violet;
+        }
+        
+        h2::after {
+            content: "i am after";
+            font-size: 0.5rem;
+        }
+        
+        h2::before {
+            content: "i am before";
+            font-size: 0.5rem;
+        }
+        
+        input:focus {
+            background-color: turquoise;
+            font-size: 2rem;
+        }
+    </style>
+
+    <body>
+        <h2>this is a heading</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit similique temporibus natus magnam minima? Similique, veritatis! Vero, libero. Nesciunt exercitationem accusantium modi veritatis impedit, molestiae, eveniet voluptas
+            pariatur ex nam eaque aperiam quasi quisquam ipsa odit sapiente at inventore!
+        </div>
+        <input type="text">
+
+    </body>
+
+</html>
