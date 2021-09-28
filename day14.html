@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        div.parent {
+            height: 500px;
+            background-color: black;
+        }
+        
+        div.child {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: crimson;
+            animation: 1s move ease;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        
+        div.child2 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: crimson;
+            animation: 1s move ease;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translateY(0vw);
+            }
+            50% {
+                transform: translate(300px, 200px);
+                background-color: blue;
+            }
+            100% {
+                transform: translateY(400px);
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child2"></div>
+    </div>
+</body>
+
+</html>
