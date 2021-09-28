@@ -1,12 +1,34 @@
-//string
-console.log("hello world")
-console.warn("hello warning")
-console.error("hello error")
-console.log(typeof "d")
+var a = 2
+var b = 10
+console.log('a+b =', a + b)
+console.log('b-a =', b - a)
+console.log('b**a =', b ** a)
 
-//number
-console.log(1)
+//asssigment operators
+console.log('b', b)
+b += 10
+console.log('b+=', b)
+b++
+console.log('b++', b)
 
-//boolean
-console.log(typeof true)
-console.log(false)
+//comparision operators
+var d = 10
+var e = 2
+var f = '10'
+
+console.log(d > e)
+console.log(d < e)
+console.warn(d == f)
+console.warn(d + f)
+console.warn(d === f)
+
+//logical operators
+console.log(true && true)
+console.log(true && false)
+console.log(false && false)
+console.log(false && true)
+
+console.log(true || true)
+console.log(true || false)
+console.log(false || true)
+console.log(false || false)
