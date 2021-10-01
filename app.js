@@ -1,9 +1,11 @@
-var headig = document.getElementById('heading')
-var body = document.querySelector('body')
-headig.inerHTML = "i am ot a headig"
-headig.style = "color:red;font-size:2rem"
-console.log(headig.classList)
-    //gives the list of classes
-headig.classList.add('five')
-headig.classList.remove('one')
-body.classList.add('dark')
+var list = document.querySelector('ul')
+console.log(list)
+var arr = ['go to gym', 'cook', 'eat']
+for (var i = 0; i < arr.length; i++) {
+    var element = document.createElement('li')
+    var textNode = document.createTextNode(arr[i])
+        //method to create textnode
+    element.appendChild(textNode)
+    console.log(element)
+
+}
