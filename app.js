@@ -1,40 +1,48 @@
-var button = document.querySelector('button')
-    /*var input = document.querySelector('input')
-    var list = document.querySelector('ul')*/
-var body = document.querySelector('body')
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
+console.log(a, b)
+const add = document.querySelector('#add')
+const multiply = document.querySelector('#multiply')
+const subtract = document.querySelector('#subtract')
 
+const resultbox = document.querySelector('.result')
 
-////const callbackfunc = () => {
-////console.log('sdf')
-//}
-
-////button.addEventListener('click', callbackfunc)
-
-//const callback = (event) => {
-// console.log(event)
-//}
-
-////button.addEventListener('click', callback)
-
-//const call = (event) => {
-// console.log(event.target)
-// console.log(input.value)
-//}
-
-//button.addEventListener('click', call)
-
-//const cal = (event) => {
-//const inputValue = input.value
-//const element = document.createElement('li')
-//const textNode = document.createTextNode(inputValue)
-// element.appendChild(textNode)
-//list.appendChild(element)
-//}
-
-//button.addEventListener('click', cal)
-
-const callback = (event) => {
-    body.classList.toggle('dark')
+/* const sum = () => {
+    const result = parseInt(a.value) + parseInt(b.value)
+    console.log(result)
+    resultbox.innerHTML = result
 }
+add.addEventListener('click', sum)
 
-button.addEventListener('click', callback)
+const mul = () => {
+    const r = parseInt(a.value) * parseInt(b.value)
+    console.log(r)
+    resultbox.innerHTML = r
+}
+multiply.addEventListener('click', mul) */
+
+const calculate = (event, operation) => {
+    /* console.log(event.target)
+    if (operation == 'add') {
+        console.log('adding')
+    } else if (operation == 'multiply') {
+        console.log('multiply')
+    } */
+    switch (operation) {
+        case "add":
+            resultbox.innerHTML = parseInt(a.value) + parseInt(b.value)
+            break
+        case "multiply":
+            resultbox.innerHTML = parseInt(a.value) * parseInt(b.value)
+            break
+        case "subtract":
+            resultbox.innerHTML = parseInt(a.value) - parseInt(b.value)
+            break
+        default:
+            resultbox.innerHTML = "not a valid operation"
+    }
+
+}
+add.addEventListener('click', (event) => { calculate(event, 'add') })
+multiply.addEventListener('click', (event) => { calculate(event, 'multiply') })
+subtract.addEventListener('click', (event) => { calculate(event, 'subtract') })
