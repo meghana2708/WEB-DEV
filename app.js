@@ -1,12 +1,10 @@
  const button = document.querySelector('button')
  const input = document.querySelector('input')
  const div = document.querySelector('div')
- div.innerHTML = localStorage.getItem('inputvalue')
- button.addEventListener('click', (req, res) => {
-         localStorage.setItem('inputvalue', input.value)
-         div.innerHTML = input.value
+ const arr = [1, 2, 3, 4]
 
-         //localStorage.setItem('inputvalue', "Something")
-     })
-     //localStorage.setItem('InputValue', "Something")
-     //console.log(localStorage.setItem('inputvalue', "Something"))
+
+
+ localStorage.setItem('InputValue', JSON.stringify(arr))
+ console.log(localStorage.getItem('InputValue'))
+ console.log(JSON.parse(localStorage.getItem('InputValue')))
