@@ -1,37 +1,38 @@
-  const http = require('http')
-  console.log(http)
-  const fs = require('fs')
-  const path = require('path')
-      // const server = http.createServer((request, response) => {
-      //     //req.url
-      //     //console.log(request.headers)
-      //     // console.log(req.method)
-      //     // const path = request.url
-      //     /*  const markup = fs.readFileSync(path.resolve('./index.html'))
-      //      response.write(markup)
-      //      response.end() */
-      //     const { url } = request
-      //     if (url == "/login") {
-      //         response.write(`<h1>LOGIN</h1>`)
-      //         response.end()
-      //     }
-      //     if (url == "/signup") {
-      //         response.write(`<h1>SIGNUP</h1>`)
-      //         response.end()
-      //     }
-      // }) 
+ const express = require("express")
+ const PORT = 3000
+ const app = express()
+ const isAdmin = (req, res, next) => {
+         if (req.headers.admin === 'true') next()
+         else res.send('UNAUTHORISED')
 
-  // server.listen(3000, () => {
-  //     console.log(`Server listening at port : ${3000}`)
-  // })
-  const express = require('express')
-
-  const app = express()
-  app.get('/login', (req, res) => {
-      console.log(req.url)
-      res.send('this is login')
-          // console.log(res)
-  })
-  app.listen(3000, () => {
-      console.log("server listening at port 3000")
-  })
+     }
+     //  const verify = (req, res, next) => {
+     //      //next moves the request to callback
+     //      //  app.get('/', (req, res) => {
+     //      // console.log(req)
+     //      if (req.headers['user-agent'] === "Thunder Client (https://www.thunderclient.io)") next() //res.send("GET")
+     //      else res.send('BLOCKED')
+     //}
+ app.get('/public', (req, res) => {
+     console.log(req.headers)
+     res.send('i am a public route')
+ })
+ app.get('/private', isAdmin, (req, res) => {
+         console.log(req.headers)
+         res.send('i am a admin route')
+     })
+     //  app.post('/', (req, res) => {
+     //      res.send('POST')
+     //  })
+     //  app.put('/', (req, res) => {
+     //      res.send('PUT')
+     //  })
+     //  app.patch('/', (req, res) => {
+     //      res.send('PATCH')
+     //  })
+     //  app.delete('/', (req, res) => {
+     //      res.send('DELETE')
+     //  })
+ app.listen(PORT, () => {
+     console.log(`Server running at ${PORT}`)
+ })
