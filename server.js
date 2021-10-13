@@ -33,6 +33,7 @@
      //  app.delete('/', (req, res) => {
      //      res.send('DELETE')
      //  })
+ app.use(express.json())
  app.post('/signup', (req, res) => {
      console.log(req.body)
      res.send('dada')
