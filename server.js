@@ -1,38 +1,24 @@
- /* let arr = [{ chore: 'Go to the Gym', status: 'incomplete' }, { chore: 'Cook Food', status: 'incomplete' }, { chore: 'Drink water', status: 'complete' }]
-   arr[0].status = 'complete'
-   console.log(arr) */
- //  let arr = [{ chore: 'Go to the Gym', status: 'incomplete' }, { chore: 'Cook Food', status: 'incomplete' }, { chore: 'Drink water', status: 'complete' }]
- //  const renderList = (filter /* = 'all' */ ) => {
- //      arr.forEach(element => {
- //          if (filter === 'all') {
- //              //console.log(element)
- //          } else if (element.status === filter) {
- //              console.log(element)
- //          }
- //      })
- //  }
- //renderList('incomplete')
- /* const express = require('express')
- const app = express()
- app.get('/products/cases')
- app.get('/products/protection')
- app.get('/products/bands')
- app.get('/products/:categories', (req, res) => {
-
-     if (req.params.categories == 'band') {}
-     console.log(req.params)
-     res.send('PING')
- })
- app.listen(3001, (req, res) => {
-     console.log("listening at port 3001")
- })  */
- const express = require('express')
+ /* let data = []
+       data.forEach(item => {
+           console.log(item)
+       }) */
  const database = require('./database/db')
- database.products.push('iPhone')
- console.log(database)
+ const express = require('express')
  const app = express()
  app.use(express.json())
+ const categoryRoutes = require('./routes/categoryRoutes')
+ console.log(categoryRoutes.stack)
+ app.use('/categories', categoryRoutes)
+ app.get('/', (req, res) => {
+     try {
+         console.log(document)
+             // res.send(error.message)
+     } catch (error) {
+         res.status(401).send(error.message)
+     }
+     // console.log(document)
+ })
 
- app.listen(3001, (req, res) => {
-     console.log("listening at port 3001")
+ app.listen(3001, () => {
+     console.log('listening at port 3001')
  })
